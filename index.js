@@ -3,8 +3,9 @@
 
 const chalk = require('chalk')
 
-module.exports = function(obj) {
+module.exports = function set(obj) {
   const $options = {
+    // eslint-disable-next-line no-console
     print: console.log
   }
   return {

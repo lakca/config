@@ -6,7 +6,10 @@
   "dependencies": {
     "chalk": "^2.4.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@lakca/eslint-config-lakca": "git+https://github.com/lakca/eslintrc.git#v1.0.0",
+    "eslint": "^6.1.0"
+  },
   "scripts": {
     "test": "test"
   },
@@ -22,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/lakca/config/issues"
   },
-  "homepage": "https://github.com/lakca/config#readme"
+  "homepage": "https://github.com/lakca/config#readme",
+  "eslintIgnore": [
+    "node_modules"
+  ]
 }

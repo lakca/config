@@ -1,7 +1,10 @@
 /* eslint-disable func-names */
 'use stirct'
 
+const joi = require('joi')
 const chalk = require('chalk')
+const { safeLoad } = require('js-yaml')
+const { readFileSync } = require('fs')
 
 module.exports = function set(obj) {
   const $options = {
@@ -111,6 +114,25 @@ module.exports = function set(obj) {
         this.log('error', 'red', msg)
         throw new Error(msg)
       }
+    }
+  }
+}
+
+module.exports.read = function read(filename, type = 'yaml', options = {}) {
+  let conf
+  if (!type) {
+    conf = require(filename)
+  } else if (type === 'yaml') {
+    conf = safeLoad(readFileSync(filename).toString('utf8'), options)
+  } else {
+    throw new Error('Unsupported file type.')
+  }
+  return {
+    attempt(genSchema, affordJoi) {
+      if (!affordJoi)
+        // eslint-disable-next-line no-param-reassign
+        affordJoi = joi
+      return affordJoi.attempt(conf, genSchema(affordJoi))
     }
   }
 }

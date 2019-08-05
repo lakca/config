@@ -4,7 +4,9 @@
   "description": "noticeable configuration procedure.",
   "main": "index.js",
   "dependencies": {
-    "chalk": "^2.4.2"
+    "chalk": "^2.4.2",
+    "joi": "^14.3.1",
+    "js-yaml": "^3.13.1"
   },
   "devDependencies": {
     "@lakca/eslint-config-lakca": "git+https://github.com/lakca/eslintrc.git#v1.0.0",

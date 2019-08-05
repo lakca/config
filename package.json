@@ -1,0 +1,26 @@
+{
+  "name": "@lakca/config",
+  "version": "1.0.0",
+  "description": "noticeable configuration procedure.",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^2.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakca/config.git"
+  },
+  "keywords": [
+    "config"
+  ],
+  "author": "lakca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lakca/config/issues"
+  },
+  "homepage": "https://github.com/lakca/config#readme"
+}

@@ -1,6 +1,6 @@
 {
   "name": "@lakca/config",
-  "version": "1.0.0",
+  "version": "v1.0.1",
   "description": "noticeable configuration procedure.",
   "main": "index.js",
   "dependencies": {
